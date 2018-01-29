@@ -31,4 +31,14 @@
               android:layout_alignBottom="@id/id_iv_icon"
              />
 
+    <LinearLayout
+        android:layout_toRightOf="@id/id_tv_tip"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="@drawable/cell_group_selector_default"
+        android:focusable="true">
+
+    </LinearLayout>
+
 </RelativeLayout>

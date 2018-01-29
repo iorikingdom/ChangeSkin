@@ -12,4 +12,9 @@
     <color name="skin_item_text_color_green">#ff00ff00</color>
     <color name="skin_left_menu_item_textColor_green">#ff00ff00</color>
 
+    <color name="test_red">#FF0000</color>
+    <color name="test_green">#00FF00</color>
+    <color name="test_blue">#0000FF</color>
+
+
 </resources>
