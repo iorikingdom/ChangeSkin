@@ -36,7 +36,7 @@
         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:clickable="true"
-        android:background="@drawable/cell_group_selector_default"
+        android:background="@drawable/skin_cell_group_selector"
         android:focusable="true">
 
     </LinearLayout>
