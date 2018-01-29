@@ -15,14 +15,21 @@ import com.zhy.changeskin.SkinManager;
  */
 public enum SkinAttrType
 {
-    BACKGROUD("background")
+    BACKGROUND("background")
             {
                 @Override
                 public void apply(View view, String resName)
                 {
                     Drawable drawable = getResourceManager().getDrawableByName(resName);
-                    if (drawable == null) return;
-                    view.setBackgroundDrawable(drawable);
+                    if (drawable != null)
+                    {
+                        view.setBackgroundDrawable(drawable);
+                    } else
+                    {
+                        int color = getResourceManager().getColor(resName);
+                        if (color == -1) return;
+                        view.setBackgroundColor(color);
+                    }
                 }
             }, COLOR("textColor")
         {

@@ -34,17 +34,15 @@ public class ResourceManager
 
     public Drawable getDrawableByName(String name)
     {
-        try {
+        try
+        {
             name = appendSuffix(name);
-            L.e("name = " + name);
+            L.e("name = " + name + " , " + mPluginPackageName);
             return mResources.getDrawable(mResources.getIdentifier(name, DEFTYPE_DRAWABLE, mPluginPackageName));
-        } catch (Resources.NotFoundException e) {
-            try {
-                return mResources.getDrawable(mResources.getIdentifier(name, DEFTYPE_COLOR, mPluginPackageName));
-            } catch (Resources.NotFoundException e2) {
-                e.printStackTrace();
-                return null;
-            }
+        } catch (Resources.NotFoundException e)
+        {
+            e.printStackTrace();
+            return null;
         }
     }
 
@@ -64,7 +62,8 @@ public class ResourceManager
 
     }
 
-    public ColorStateList getColorStateList(String name) {
+    public ColorStateList getColorStateList(String name)
+    {
         try
         {
             name = appendSuffix(name);
@@ -83,7 +82,7 @@ public class ResourceManager
     {
         if (!TextUtils.isEmpty(mSuffix))
             return name += "_" + mSuffix;
-        return name ;
+        return name;
     }
 
 }

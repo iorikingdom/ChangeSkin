@@ -9,9 +9,9 @@ import java.util.List;
  */
 public class SkinView
 {
-//    SoftReference<View> viewRef;
-    View view ;
-    List<SkinAttr> attrs;
+    //    SoftReference<View> viewRef;
+    public View view ;
+    public List<SkinAttr> attrs;
 
     public SkinView(View view, List<SkinAttr> skinAttrs)
     {
@@ -21,7 +21,7 @@ public class SkinView
 
     public void apply()
     {
-       // View view = viewRef.get();
+        // View view = viewRef.get();
         if (view == null) return;
 
         for (SkinAttr attr : attrs)

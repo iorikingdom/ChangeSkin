@@ -59,4 +59,5 @@ public class PrefUtils
         SharedPreferences sp = mContext.getSharedPreferences(SkinConfig.PREF_NAME, Context.MODE_PRIVATE);
         sp.edit().putString(SkinConfig.KEY_PLUGIN_SUFFIX, suffix).apply();
     }
+
 }
